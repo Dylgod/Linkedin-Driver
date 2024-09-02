@@ -3,9 +3,6 @@ This is a script to automate Linkedin. This script is a part of a larger automat
 and not meant for public use. I am not responsible for any misuse of this script.
 This is strictly a showcase piece.
 
-In order to function this script needs the following env variables:
-- Supabase url and key
-
 What it does/has:
 - Signs in to Linkedin and stores cookies
 - Searches for jobs relevant to given profile
@@ -15,11 +12,6 @@ What it does/has:
 - Requires Google Chrome and downloads it if unavailable
 - Downloads and/or updates chromedriver when needed
 - local db logging system for easy debugging
-
-
-
-
-
 """
 
 from seleniumbase import Driver
@@ -69,7 +61,7 @@ if len(dupe_check)>2:
     sys.exit()
 
 # True for PROD, False for TEST
-WE_ARE_SUBMITTING = True
+WE_ARE_SUBMITTING = False
 
 # final print statement -> gets changed throughout and prints this if no error occurs
 finalprint = "Finished! Check your email"
